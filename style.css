@@ -1,0 +1,278 @@
+
+/*NORMALIZACIÓN: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto mantiene el ancho y alto a pesar de padding border */
+    font-family: "Inconsolata", monospace;
+    list-style: none; /* Elimina los puntos y decoración de las listas */
+    text-decoration:none; /* Elimina la decoración de los enlaces, el subrayado de los enlaces */;
+    color: white;
+}
+
+body {
+    background-color: black; /*TO DO: cambiar color de fondo cuando tenga el fondo final*/
+}
+
+/*HEADER: */
+header {
+    position: fixed; /* Se queda fijo en la parte superior de la página */
+    right: 0;
+    top: 0;
+    z-index: 100; /* Para que esté por encima de todo */
+    width: 100%;
+    display: flex; /* Para que los elementos se alineen en línea */
+    align-items: center; /* Para que los elementos se alineen verticalmente */
+    justify-content: space-between; /* Para que los elementos se alineen horizontalmente */
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800; /* Grosor de la fuente */
+}
+
+.nav-list{
+    display: flex; /* Para que los elementos se alineen en línea */
+}
+
+.nav-list a {
+    margin-left: 60px; /* Espacio entre los elementos */
+    font-size: 15px;
+    font-weight: 600; /* Grosor de la fuente */
+    border-bottom: 2px solid transparent; /* Línea inferior de los elementos */ 
+    transition: all .5s ease; /* Esto es para animar todos los cambios de los elementos */
+}
+
+.nav-list a:hover {
+    border-bottom: 2px solid white; /* Línea inferior de los elementos al pasar el ratón por encima */
+}
+
+
+#menu-icon {
+    display: none; /* Oculta el icono del menú. Para que el icono del menú se muestre en dispositivos móviles */
+}
+  
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 101; /* Para que esté por encima de todo, el header */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}    
+
+#menu-toggle {
+    display: none; /* Oculta el icono del menú, el checkbox*/
+}
+
+.menu-icon-action {
+    display: none; /*Para que no le pueda hacer click al icono del menú */
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /* Degradado de colores */
+    position: relative; /* Para que los elementos se posicionen relativamente */
+    display: grid; /* Para que los elementos se alineen en grid */
+    grid-template-columns: 1fr 1fr; /* Para que haya dos columnas */
+    align-items: center; /* Para que los elementos se alineen verticalmente */
+    gap: 2rem; /* Espacio entre las columnas */
+}
+
+section {
+    padding: 0 8%; /* Espacio entre los elementos */
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text p {
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img{
+    width: 400px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    transition: all 4s linear; /* Para animar los cambios de los elementos */
+}
+
+.hero-img img:hover {
+    width: 450px; /* Ancho de la imagen al pasar el ratón por encima */
+    opacity: 0.6; /* Opacidad de la imagen al pasar el ratón por encima */    
+}
+
+.hero-text a {
+    display: inline-block; /* Para que los elementos se alineen en línea */
+    background-color: #4d4d4d; /* Color de fondo del botón */
+    border: 1px solid transparent;  /* Borde del botón */
+    padding: 15px 30px; /* Espacio entre el texto y el borde del botón */
+    font-size: 14px;    
+    font-weight: 500;   
+    border-radius: 30px; /* Borde redondeado del botón */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    transition: all .5s ease; /* Para animar todos los cambios de los elementos */
+}
+
+.hero-text a:hover {
+    background-color:transparent ; /* Color de fondo del botón al pasar el ratón por encima */
+    border: 1px solid #fff; /* Borde del botón al pasar el ratón por encima */
+    transform: translateX(8px);
+}
+
+.hero-text a.videos {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.videos i {
+    vertical-align: middle; /* Alinea verticalmente el icono */
+    margin-right: 5px;
+}
+
+.icons{
+    position: absolute; /* Para que los elementos se posicionen absolutamente */
+    top: 50vh; /* Posición vertical de los elementos */
+    padding: 0 3%; /* Espacio entre los elementos */
+    transform: translateY(-50%); /* Para centrar los elementos verticalmente */
+}
+
+.icons i {
+    display: block; /* Para que los elementos se alineen en bloque */
+    margin: 26px 0; /* Espacio entre los elementos */
+    font-size: 24px;
+    transition: all .5s ease; /* Para animar todos los cambios de los elementos */
+}
+
+.icons i:hover {
+    color: #4d4d4d; /* Color de los iconos al pasar el ratón por encima */
+    transform: translateY(-5px); /* Para centrar los elementos verticalmente al pasar el ratón por encima */
+}
+
+.scroll-down{
+    position: absolute; /* Para que los elementos se posicionen absolutamente */
+    bottom: 6%; /* Posición vertical de los elementos */
+    right: 3%; /* Posición horizontal de los elementos */
+   }
+
+.scroll-down i{
+    display: block; /* Para que los elementos se alineen en bloque */
+    padding: 12px; /* Espacio entre los elementos */
+    font-size: 25px;
+    background-color: #21383d; /* Color de fondo del botón */
+    border-radius: 30px; /* Borde redondeado del botón */
+    transition: all .5s ease; /* Para animar todos los cambios de los elementos */  
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px); /* Para centrar los elementos verticalmente al pasar el ratón por encima */
+}
+
+
+/* Aca vamos a hacer mediaqueries para que la web sea responsiva */
+
+@media (max-width: 992px) {
+
+    section {
+        padding: 0 3%; /* Espacio entre los elementos */
+        transition: .2s;
+    }
+
+    .hero-text {
+        padding-top: 0;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+
+    .hero-text p {
+        font-size: 70%;
+    }
+    
+    .icons {
+        display: none; /* Hide the icons */
+    }
+
+    .scroll-down {
+        display: none; /* Hide the scroll-down button */
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .menu-icon-action {
+        display: block; /* Show the icon */
+    }
+
+    #menu-icon {
+        display: block; /* Show the icon */
+    }
+
+    .hero-text {
+        text-align: center; /* Center the text */
+        padding-top: 100px;
+        
+    }
+
+    .hero-img {
+        margin: 0; /* Remove the margin */
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem; /* Espacio entre las columnas */
+        grid-template-columns: 1fr; /* Para que haya una columna */
+    }
+
+    .nav-list {
+        position: absolute; /* Para que los elementos se posicionen absolutamente */
+        top: 100%; /* Posición vertical de los elementos */
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color: #03322690;
+        display: flex; /* Para que los elementos se alineen en línea */
+        flex-direction: column; /* Para que los elementos se alineen verticalmente */
+        align-items: center;
+        padding: 30px 20px; /* Espacio entre los elementos */
+        transition: all .5s ease-out; /* Para animar los cambios de los elementos */
+    }
+
+    .nav-list a {
+        display: block; /* Para que los elementos se alineen en bloque */
+        margin: 7px 0; /* Espacio entre los elementos */
+    }
+
+    #menu-toggle:checked + label.menu-icon-action  + ul { /* Para que los elementos se muestren al hacer click */
+        right: 0;
+    }
+
+}
